@@ -100,7 +100,7 @@ body {
     transition-duration: .8s;
 }
 
-.overlay[active] {
+.overlay {
     background-color: rgba(0, 0, 0 , .5);
     top: 0;
     right: 0;
@@ -109,7 +109,18 @@ body {
     position: fixed;
 }
 
+.overlay[fadeOut] {
+    background-color: rgba(0, 0, 0 , 0);
+    transition-property: background-color;
+    transition-duration: 3s;
+}
+
+.overlay:not([active]) {
+    z-index: -1;
+}
+
 .main-content-table {
+    visibility: hidden;
     margin: 1em auto;
     max-width: 80%;
     border-spacing: 0;
@@ -134,4 +145,88 @@ body {
 
 .removed {
     background-color: #ffa7a7;
+}
+
+/* ---------- ANIMAÇÕES -------- */
+
+@keyframes mixarLeft {
+     0% {
+         transform: translateX(0) rotate(0deg);
+     }
+    35%{
+        transform-origin: left center 0;
+        transform: translateX(-5%);
+    }
+    40% {
+        transform-origin: left center 0;
+        transform: translateX(-5%) rotate(-5deg);
+    }
+    50% {
+        transform-origin: left center 0;
+        transform: translateX(-5%) rotate(5deg);
+    }
+    60% {
+        transform-origin: left center 0;
+        transform: translateX(-5%) rotate(-5deg);
+    }
+    70% {
+        transform-origin: left center 0;
+        transform: translateX(-5%) rotate(5deg);
+    }
+    80% {
+        transform-origin: left center 0;
+        transform: translateX(-5%) rotate(-5deg);
+    }
+    90% {
+        transform-origin: left center 0;
+        transform: translateX(-5%) rotate(5deg);
+    }
+    100% {
+        transform-origin: left center 0;
+    }
+}
+
+@keyframes mixarRight {
+    0% {
+        transform: translateX(0) rotate(0deg);
+    }
+    35%{
+        transform-origin: right 51% 0;
+        transform: translateX(5%);
+    }
+    40% {
+        transform-origin: right 51% 0;
+        transform: translateX(5%) rotate(-5deg);
+    }
+    50% {
+        transform-origin: right 51% 0;
+        transform: translateX(5%) rotate(5deg);
+    }
+    60% {
+        transform-origin: right 51% 0;
+        transform: translateX(5%) rotate(-5deg);
+    }
+    70% {
+        transform-origin: right 51% 0;
+        transform: translateX(5%) rotate(5deg);
+    }
+    80% {
+        transform-origin: right 51% 0;
+        transform: translateX(5%) rotate(-5deg);
+    }
+    90% {
+        transform-origin: right 51% 0;
+        transform: translateX(5%) rotate(5deg);
+    }
+    100% {
+        transform-origin: right center 0;
+    }
+}
+
+#new[animate] {
+    animation: mixarLeft 3s 1 normal both;
+}
+
+#old[animate] {
+    animation: mixarRight 3s 1 normal both;
 }

@@ -62,9 +62,41 @@ function ordemAlfabetica(a, b) {
 
 const antigo = $("#old");
 const novo = $("#new");
+const compararBtn = $("#comparar-btn")
+
+function animacoes() {
+    $(".main-content-box-holder-field").attr("animate", "animate");
+    $(".main-content-table").css("visibility", "hidden");
+    $(".overlay").attr({
+        "active": "",
+        "fadeOut": null
+    });
+
+    $('html, body').stop().animate({
+        scrollTop: $(".main-header").offset().top
+    }, 2000);
+
+    setTimeout(() => {
+        $(".main-content-box-holder-field").attr("animate", null);
+        $(".main-content-table").css("visibility", "visible");
+        $(".overlay").attr("fadeOut", "");
+
+        setTimeout( () => {
+            $(".overlay").attr({
+                "active": null
+            });
+        }, 2000);
+
+        $('html, body').stop().animate({
+            scrollTop: $("#tabela-alterados").offset().top
+        }, 2000);
+    }, 3000)
+}
 
 $( window ).on("load", function() {
-    $("#comparar-btn").click( () => {
+    compararBtn.click( () => {
+
+        animacoes();
 
         //pega fields
         const novos = novo.val().match(rule);
@@ -90,7 +122,6 @@ $( window ).on("load", function() {
             let todos = removidos.concat(adicionados);
 
             $(".main-content-table").append(todos.sort( ordemAlfabetica ).join(""));
-            window.location.href = "#tabela-alterados";
         }
     });
 });
