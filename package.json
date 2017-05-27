@@ -1,0 +1,18 @@
+{
+  "name": "filediff",
+  "version": "1.0.0",
+  "description": "Facilmente mapeia entrada e saida de itens",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marcelo de Bairros",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.5.1",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-watch": "^4.3.11"
+  }
+}

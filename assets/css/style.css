@@ -1,0 +1,137 @@
+html,
+body {
+    margin: 0;
+    background-color: #ebe8ff;
+    font-size: 1.3em;
+}
+
+.container {
+    width: 98%;
+    height: 98%;
+    margin: 0 auto;
+}
+
+.main-header {
+    padding-top: 2em;
+    margin-top: 0;
+    margin-bottom: 2em;
+}
+
+.main-header h1 {
+    text-align: center;
+}
+
+.login-form {
+    margin-top: 5em;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 500px;
+}
+
+.login-form .name-input {
+    margin: .5em 4%;
+}
+
+.login-form .name-label{
+    margin-left: 5%;
+
+}
+
+.submit-button {
+    margin: 0 30%;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: .7em;
+    padding: 5px;
+    background-color: azure;
+    color: #000;
+    border: 1px solid #b8b8b8;
+}
+
+/* --------- COMPARE --------- */
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.main-content-box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+.main-content-box-holder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-content-box-holder-label {
+    margin-bottom: .3em;
+}
+
+.main-content-box-holder-field {
+    resize: none;
+    width: 90%;
+}
+
+.main-content-box-holder-field:focus {
+    z-index: 1;
+    box-shadow: 1px 1px 10px 10px #bacadb;
+    transition: box-shadow;
+    transition-duration: .4s;
+}
+
+.main-content-box-holder-field:focus {
+    z-index: 1;
+    box-shadow: 1px 1px 10px 10px #bacadb;
+    transition: box-shadow;
+    transition-duration: .4s;
+}
+
+.main-content-box-holder-field:not(:focus) {
+    transition: box-shadow;
+    transition-duration: .8s;
+}
+
+.overlay[active] {
+    background-color: rgba(0, 0, 0 , .5);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+}
+
+.main-content-table {
+    margin: 1em auto;
+    max-width: 80%;
+    border-spacing: 0;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    border: 2px solid #666575;
+}
+
+.main-content-table th{
+    color: #ebe8ff;
+    background-color: #666575;
+}
+.main-content-table td{
+    padding: .5em;
+    border-bottom: 1px solid #666575;
+}
+
+.added {
+    background-color: #bbdbb2;
+}
+
+.removed {
+    background-color: #ffa7a7;
+}

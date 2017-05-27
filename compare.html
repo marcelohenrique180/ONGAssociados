@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="assets/css/normalize.css" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="utf-8" />
+</head>
+<body>
+<div class="overlay"></div>
+
+<div class="container">
+  <header class="main-header">
+    <h1>Bem vindo(a)<span class="username">!</span></h1>
+  </header>
+  <main class="main-content">
+    <div class="main-content-box">
+      <div class="main-content-box-holder">
+        <label for="old" class="main-content-box-holder-label">Antigo</label>
+        <textarea name="old" id="old" cols="30" rows="10" class="main-content-box-holder-field"></textarea>
+      </div>
+      <div class="main-content-box-holder">
+        <label for="new" class="main-content-box-holder-label">Novo</label>
+        <textarea name="old" id="new" cols="30" rows="10" class="main-content-box-holder-field"></textarea>
+      </div>
+    </div>
+    <button id="comparar-btn" class="submit-button">Comparar</button>
+    <table id="tabela-alterados" class="main-content-table">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Matricula</th>
+          <th>Lotação</th>
+          <th>Valor Líquido</th>
+        </tr>
+      </thead>
+      <tbody>
+
+      </tbody>
+    </table>
+  </main>
+</div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="deploy/js/compare.js"></script>
+</body>
+</html>
